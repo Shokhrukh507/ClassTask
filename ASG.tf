@@ -1,4 +1,3 @@
-# Create Auto Scaling Group for the project
 resource "aws_appautoscaling_target" "target" {
   service_namespace = "ecs"
   resource_id = "service/${aws_ecs_cluster.ecs.name}/${aws_ecs_service.main.name}"
