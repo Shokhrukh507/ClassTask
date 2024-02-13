@@ -38,9 +38,9 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
 
-    # - name: Terraform Destroy all
-    #   run: terraform destroy -auto-approve
+    - name: Terraform Destroy all
+      run: terraform destroy -auto-approve
 
-    - name: Terraform Apply
-      if: github.event_name == 'pull_request'
-      run: terraform apply -auto-approve
+    # - name: Terraform Apply
+    #   if: github.event_name == 'pull_request'
+    #   run: terraform apply -auto-approve
