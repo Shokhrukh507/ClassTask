@@ -1,6 +1,6 @@
 resource "aws_alb" "projectALB" {
     name = "Project ALB"
-    subnets = aws.subnet.public.*.id
+    subnets = aws_subnet.public.*.id
     security_groups = [aws_security_group.ALB.id]  
 }
 resource "aws_alb_target_group" "projectTG" {
